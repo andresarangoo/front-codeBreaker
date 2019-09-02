@@ -1,19 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Consumo del API Code Breaker
-  </h1>
+  <h1>Front-CodeBreaker</h1>
   <h1>
     Andres Arango
   </h1>
 </div>
-
-<ul>
-  <h2 style="text-align:center">Ingrese un numero de 4 digitos diferentes </h2>
+  
   <div style="text-align:center">
-    <input type="text" style="text-align:center">
-    <button (click)="onClickMe()" style="text-align:center"> Verificar </button>
+    <h2 style="text-align:center">Ingrese el numero secreto</h2>
+    <input id="setSecretInput" type="number" style="text-align:center" [(ngModel)]="number">
+    <button id="setSecretButton" (click)="setSecret()" style="text-align:center"> Ingrese Secreto</button>
+    <p id="response-set-secret">{{response}}</p>
+    
   </div>
-</ul>
-
-<router-outlet></router-outlet>
+  
+  <div style="text-align:center">
+    <h2 style="text-align:center">Adivine el numero</h2>
+    <input id="setGuessInput" type="number" style="text-align:center" [(ngModel)]="guess">
+    <button id="setGuessButton" (click)="checkGuess()" style="text-align:center"> Ingrese numero</button>
+    <p id="response-set-secret">{{guessResponse}}</p>
+  </div>
